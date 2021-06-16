@@ -31,3 +31,11 @@ class DataFrameImputer(TransformerMixin):
         """
         return X.fillna(self.fill)
 
+    def isFitted(self):
+        """Returns if data is fitted to object 
+
+        :return: True if data fitted to the object else returns False
+        :rtype: boolean
+        """
+        return hasattr(self,'fill')
+
